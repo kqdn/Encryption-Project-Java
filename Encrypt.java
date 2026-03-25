@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.io.FileReader;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 /**
  *  Class for encoding entire files.
@@ -13,8 +13,15 @@ public class Encrypt {
 	public static void main(String[] args) {
 	    Scanner input = new Scanner(System.in);
 	    System.out.println("Do you want to encode or decode? (e/d) ");
-	    char response = input.next().toLowerCase().charAt(0);
-	    
+		String subCipher = "";
+		while(subCipher.length() != 26) {
+			System.out.println("Enter the substitution key you want to use: " +
+			"(must be 26 charaacters long)");
+			subCipher = input.next();
+			if(subCipher.length()!=26) System.out.println("Key must be 26 characters long.");
+		} //prompts the user to enter a substitution cipher instead of the caesar shift
+		//it repeats the prompt if the user enters invalid length
+	    char response = input.next().toLowerCase().charAt(0);	    
 	    System.out.println("Input file: ");
 	    String infile = input.next();
 	    System.out.println("Output file: ");

@@ -11,7 +11,7 @@
 // Hint: the isUpperCase and toUpperCase methods from the Character class should be of use here.
 public class Cipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    private static final String SHIFTED = "defghijklmnopqrstuvwxyzabc";
+    private static String SHIFTED = "defghijklmnopqrstuvwxyzabc";
 
     /**
      *  Constructs a Cipher object.
