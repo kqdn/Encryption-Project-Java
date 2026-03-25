@@ -24,4 +24,6 @@ swap these lines around so then subCipher doesn't change out of the valid caesar
 
 That fixed it, now I'm moving onto part 3 where I have to caesar shift my cipher key by 1
 after each char I encode/decode. I implemented rotate but it's not working when I use a subcipher
-for unknown.txt.
+for unknown.txt. What I'm realizing is that my encode and decode are perfect inverse operations,
+so encoding and decoding a file leaves it unchanged. My issue is with my rotate implementation
+because it doesn't work for unknown.txt.
