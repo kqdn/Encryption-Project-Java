@@ -18,9 +18,9 @@ public class Cipher {
      */
 
     public Cipher(String subCipher) {
-        if(subCipher.equalsIgnoreCase("caesar")) 
-            SHIFTED = "defghijklmnopqrstuvwxyzabc";
         SHIFTED = subCipher;
+        if(SHIFTED.equalsIgnoreCase("caesar"));
+            SHIFTED = "defghijklmnopqrstuvwxyzabc";
     }
 
     /**

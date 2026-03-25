@@ -2,12 +2,22 @@ One paragraph or more describing the struggles with the project:
 
 Upon reading the project requirements, I'm wondering how to implement the cipher for
 non characters and uppercase/lowercase letters. I think I will do if/elseif statements, 
-using if(isnt char) dont shift, else if(char==char.tolower) shift the lowercase letter, else shift the uppercase letter.
+using if(isnt char) dont shift, else if(char==char.tolower) shift the lowercase letter, 
+else shift the uppercase letter.
 Let's see how this goes. 
 
 First issue: I put these special characters into my struggles.txt and tested it with encrypt.java
 ÷÷¡™∂π“∂¬¡ƒø¨´˜˜
-Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Index -1 out of bounds for length 26
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Index -1 out
+of bounds for length 26
 So my isUpperCase method breaks when I use special characters. I should use a different method.
 
 Encode works now!
+
+I'm facing an issue now when using the caesar shift in my constructor. It says index 14 out 
+of bounds for length 6
+if(subCipher.equalsIgnoreCase("caesar")) 
+            SHIFTED = "defghijklmnopqrstuvwxyzabc";
+        SHIFTED = subCipher;
+I think this is my issue because it changes shifted to "caesar" which wont work. I need to
+swap these lines around so then subCipher doesn't change out of the valid caesar shift.
