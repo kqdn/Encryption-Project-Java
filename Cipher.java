@@ -12,6 +12,13 @@
 public class Cipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     private String SHIFTED;
+    private void rotate() {
+        char[] chars = SHIFTED.toCharArray();
+        for(int i = 0; i<26; i++) {
+            chars[i] = SHIFTED.charAt((i+1)%26);
+        }
+        SHIFTED = new String(chars);
+    }
 
     /**
      *  Constructs a Cipher object.
