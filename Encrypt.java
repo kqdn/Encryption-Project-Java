@@ -13,6 +13,11 @@ public class Encrypt {
 	public static void main(String[] args) {
 	    Scanner input = new Scanner(System.in);
 	    System.out.println("Do you want to encode or decode? (e/d) ");
+	    char response = input.next().toLowerCase().charAt(0);	    
+	    System.out.println("Input file: ");
+	    String infile = input.next();
+	    System.out.println("Output file: ");
+	    String outfile = input.next();
 		String subCipher = "";
 		System.out.println("""
                                     Enter the substitution key you want to use: (must be 26 charaacters long)
@@ -24,11 +29,6 @@ public class Encrypt {
 			//breaks loop if caesar is entered
 		} //prompts the user to enter a substitution cipher instead of the caesar shift
 		//it repeats the prompt if the user enters invalid length
-	    char response = input.next().toLowerCase().charAt(0);	    
-	    System.out.println("Input file: ");
-	    String infile = input.next();
-	    System.out.println("Output file: ");
-	    String outfile = input.next();
 	    
 	    Cipher coder = new Cipher(subCipher);
 	    try {
