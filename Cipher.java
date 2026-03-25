@@ -55,6 +55,7 @@ public class Cipher {
         //not a letter
         result = ch;
         }
+        rotate();
         return result;
     }
 	
@@ -78,6 +79,7 @@ public class Cipher {
         //not a letter
         result = ch;
         }
+        rotate();
         return result;
         //just copied my encode implementation but swapped shifted and alphabet
 	}
