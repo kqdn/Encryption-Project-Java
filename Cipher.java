@@ -41,19 +41,21 @@ public class Cipher {
     // the key field. Then, this method should be called by both
     // encode and decode after a character has been processed.
 	public char encode(char ch) {
+        char result;
         if (ch >= 'a' && ch <= 'z') {
             //lowercase
             int index = Cipher.ALPHABET.indexOf(ch);
-            return SHIFTED.charAt(index);
+            result = SHIFTED.charAt(index);
         } else if (ch >= 'A' && ch <= 'Z') {
             ch = Character.toLowerCase(ch); //convert to lower so i can use the given shift method
             int index = Cipher.ALPHABET.indexOf(ch);
-            return Character.toUpperCase(SHIFTED.charAt(index));
+            result = Character.toUpperCase(SHIFTED.charAt(index));
             //have to return the uppercase version of whats shifted
         } else {
         //not a letter
-        return ch;
+        result = ch;
         }
+        return result;
     }
 	
     /**
