@@ -25,9 +25,25 @@ public class Cipher {
      *   @param ch the character to be encoded
      *   @return the character three later in the alphabet, with wrap-around
      */
+    //isuppercase returns false if it is a char
 	public char encode(char ch) {
-	    int index = Cipher.ALPHABET.indexOf(ch);
-	    return Cipher.SHIFTED.charAt(index);
+        if(Character.isUppercase(ch)) {
+            int index = Cipher.ALPHABET.indexOf(Character.toLowerCase(ch)); 
+            //converts it to lowercase because it is upppercase
+            //then i can find the index of the character
+	        return Character.toUpperCase(Cipher.SHIFTED.charAt(index));
+            //uses the old shift implementation because it is lowercase
+            //since the old shift changes to lowercase, i have to convert this back to uppercase
+        }
+        else if(Character.isLowerCase(ch)) {
+            //lowercase, no change to original implementation
+            int index = Cipher.ALPHABET.indexOf(ch);
+	        return Cipher.SHIFTED.charAt(index);
+        }
+        else {
+            //its not a char, don't shift
+            return ch;
+        }
 	}
 	
     /**
