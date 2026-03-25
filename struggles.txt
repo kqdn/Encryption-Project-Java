@@ -9,3 +9,5 @@ First issue: I put these special characters into my struggles.txt and tested it 
 ÷÷¡™∂π“∂¬¡ƒø¨´˜˜
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: Index -1 out of bounds for length 26
 So my isUpperCase method breaks when I use special characters. I should use a different method.
+
+Encode works now!
