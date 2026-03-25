@@ -28,6 +28,11 @@ public class Cipher {
      *   @param ch the character to be encoded
      *   @return the character three later in the alphabet, with wrap-around
      */
+
+    // Part 3: Modify your Cipher class so that it performs a rotation after each character
+    //  is encoded/decoded. You should define a private method named rotate that rotates 
+    // the key field. Then, this method should be called by both
+    // encode and decode after a character has been processed.
 	public char encode(char ch) {
         if (ch >= 'a' && ch <= 'z') {
             //lowercase
