@@ -14,6 +14,9 @@ public class Cipher {
     private String SHIFTED;
     private void rotate() {
         SHIFTED = SHIFTED.substring(1) + SHIFTED.charAt(0);
+        //new shifted starts with substring from the second element of
+        //original to the end of the string, appending the first char of original shifted
+        //to the end of new string.
     }
 
     /**
