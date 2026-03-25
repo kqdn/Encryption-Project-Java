@@ -1,2 +1,6 @@
 One paragraph or more describing the struggles with the project:
 
+Upon reading the project requirements, I'm wondering how to implement the cipher for
+non characters and uppercase/lowercase letters. I think I will do if/elseif statements, 
+using if(isnt char) dont shift, else if(char==char.tolower) shift the lowercase letter, else shift the uppercase letter.
+Let's see how this goes.

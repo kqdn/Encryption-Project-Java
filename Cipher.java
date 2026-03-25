@@ -2,6 +2,13 @@
  *  Class that encodes and decodes individual characters using the "Caesar cipher".
  *    @author Dave Reed
  */
+// The Cipher class contains a partial implementation of the Caesar cipher. The encode and decode methods can
+// be used to encode and decode lower-case letters by shifting them three positions in the alphabet. Modify
+// these methods so that they handle upper-case letters and non-letters as well. An upper-case letter should be
+// encoded/decoded just like its lower-case equivalent, producing the corresponding upper-case letter. For
+// example, 'A' should be encoded as 'D'. Characters that are not letters should be left as is. For example, the
+// encoding of a space or exclamation mark should be that same character unchanged.
+// Hint: the isUpperCase and toUpperCase methods from the Character class should be of use here.
 public class Cipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     private static final String SHIFTED = "defghijklmnopqrstuvwxyzabc";
