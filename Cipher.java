@@ -27,7 +27,7 @@ public class Cipher {
      */
     //isuppercase returns false if it is a char
 	public char encode(char ch) {
-        if(Character.isUppercase(ch)) {
+        if(Character.isUpperCase(ch)) {
             int index = Cipher.ALPHABET.indexOf(Character.toLowerCase(ch)); 
             //converts it to lowercase because it is upppercase
             //then i can find the index of the character
