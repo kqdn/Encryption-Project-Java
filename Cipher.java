@@ -11,7 +11,7 @@
 // Hint: the isUpperCase and toUpperCase methods from the Character class should be of use here.
 public class Cipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    private static String SHIFTED;
+    private String SHIFTED;
 
     /**
      *  Constructs a Cipher object.
@@ -37,11 +37,11 @@ public class Cipher {
         if (ch >= 'a' && ch <= 'z') {
             //lowercase
             int index = Cipher.ALPHABET.indexOf(ch);
-            return Cipher.SHIFTED.charAt(index);
+            return SHIFTED.charAt(index);
         } else if (ch >= 'A' && ch <= 'Z') {
             ch = Character.toLowerCase(ch); //convert to lower so i can use the given shift method
             int index = Cipher.ALPHABET.indexOf(ch);
-            return Character.toUpperCase(Cipher.SHIFTED.charAt(index));
+            return Character.toUpperCase(SHIFTED.charAt(index));
             //have to return the uppercase version of whats shifted
         } else {
         //not a letter
@@ -57,11 +57,11 @@ public class Cipher {
     public char decode(char ch) {
         if (ch >= 'a' && ch <= 'z') {
             //lowercase
-            int index = Cipher.SHIFTED.indexOf(ch);
+            int index = SHIFTED.indexOf(ch);
             return Cipher.ALPHABET.charAt(index);
         } else if (ch >= 'A' && ch <= 'Z') {
             ch = Character.toLowerCase(ch); //convert to lower so i can use the given shift method
-            int index = Cipher.SHIFTED.indexOf(ch);
+            int index = SHIFTED.indexOf(ch);
             return Character.toUpperCase(Cipher.ALPHABET.charAt(index));
             //have to return the uppercase version of whats shifted
         } else {
