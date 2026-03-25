@@ -24,8 +24,8 @@ public class Encrypt {
                                     Or you can enter "caesar" to use a caesar shift of 3.""");
 		while(subCipher.length() != 26) {
 			subCipher = input.next();
-			if(subCipher.length()!=26) System.out.println("Key must be 26 characters long.");
 			if(subCipher.equalsIgnoreCase("caesar")) break; 
+			if(subCipher.length()!=26) System.out.println("Key must be 26 characters long.");
 			//breaks loop if caesar is entered
 		} //prompts the user to enter a substitution cipher instead of the caesar shift
 		//it repeats the prompt if the user enters invalid length
