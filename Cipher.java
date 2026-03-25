@@ -11,13 +11,16 @@
 // Hint: the isUpperCase and toUpperCase methods from the Character class should be of use here.
 public class Cipher {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    private static String SHIFTED = "defghijklmnopqrstuvwxyzabc";
+    private static String SHIFTED;
 
     /**
      *  Constructs a Cipher object.
      */
-    public Cipher() {
-	    // currently, does nothing
+
+    public Cipher(String subCipher) {
+        if(subCipher.equalsIgnoreCase("caesar")) 
+            SHIFTED = "defghijklmnopqrstuvwxyzabc";
+        SHIFTED = subCipher;
     }
 
     /**
