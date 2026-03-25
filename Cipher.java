@@ -47,7 +47,19 @@ public class Cipher {
      *   @return the character three earlier in the alphabet, with wrap-around
      */
     public char decode(char ch) {
-	    int index = Cipher.SHIFTED.indexOf(ch);
-	    return Cipher.ALPHABET.charAt(index);
+        if (ch >= 'a' && ch <= 'z') {
+            //lowercase
+            int index = Cipher.SHIFTED.indexOf(ch);
+            return Cipher.ALPHABET.charAt(index);
+        } else if (ch >= 'A' && ch <= 'Z') {
+            ch = Character.toLowerCase(ch); //convert to lower so i can use the given shift method
+            int index = Cipher.SHIFTED.indexOf(ch);
+            return Character.toUpperCase(Cipher.ALPHABET.charAt(index));
+            //have to return the uppercase version of whats shifted
+        } else {
+        //not a letter
+        return ch;
+        }
+        //just copied my encode implementation but swapped shifted and alphabet
 	}
 }
