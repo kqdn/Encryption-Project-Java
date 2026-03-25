@@ -22,7 +22,7 @@ public class Cipher {
 
     public Cipher(String subCipher) {
         SHIFTED = subCipher;
-        if(SHIFTED.equalsIgnoreCase("caesar"));
+        if(SHIFTED.equalsIgnoreCase("caesar"))
             SHIFTED = "defghijklmnopqrstuvwxyzabc";
     }
 
