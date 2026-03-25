@@ -26,4 +26,7 @@ That fixed it, now I'm moving onto part 3 where I have to caesar shift my cipher
 after each char I encode/decode. I implemented rotate but it's not working when I use a subcipher
 for unknown.txt. What I'm realizing is that my encode and decode are perfect inverse operations,
 so encoding and decoding a file leaves it unchanged. My issue is with my rotate implementation
-because it doesn't work for unknown.txt.
+because it doesn't work for unknown.txt. After some testing I have found that my rotate function
+was incorrect because of the semicolon I had after the if statement, so the next line of code
+would always run which isn't what I wanted. That made it so that SHIFTED was always the caesar shift
+which is why it didn't work for subsstitutions. Now it works and I'm done.
