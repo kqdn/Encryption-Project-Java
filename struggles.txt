@@ -21,3 +21,6 @@ if(subCipher.equalsIgnoreCase("caesar"))
         SHIFTED = subCipher;
 I think this is my issue because it changes shifted to "caesar" which wont work. I need to
 swap these lines around so then subCipher doesn't change out of the valid caesar shift.
+
+That fixed it, now I'm moving onto part 3 where I have to caesar shift my cipher key by 1
+after each char I encode/decode.
